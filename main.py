@@ -46,5 +46,5 @@ elif args.action == 'retrieve':
             file = document.metadata["source"].split("/")[-1]
             doi = document.metadata["doi"]
             date = document.metadata["date"]
-            title = document.metadata["title"].replace('\n', '')
+            title = document.metadata["title"].replace('\n', ' ')
             print(f"Document #{i+1}:\n     Title: '{title}'\n     Date: {date}      DOI: {doi or '<unavailabe>'}")
