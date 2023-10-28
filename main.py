@@ -40,4 +40,11 @@ elif args.action == 'retrieve':
                 title = document.metadata["title"]
                 log.info("Chunk %d of %d with %d characters, from file %s\nDOI %s, Date:%s Title: %s\n%s [...] %s\n",
                          i+1, len(documents), len(chunk), file, doi, date, title, chunk[:50], chunk[-50:])
-        print(f"\n\nAnswer: {answer}")
+        print(f"\n\n---> Answer: {answer}")
+        print("\n\n---> Suggested documents for additional research:")
+        for i, document in enumerate(documents):
+            file = document.metadata["source"].split("/")[-1]
+            doi = document.metadata["doi"]
+            date = document.metadata["date"]
+            title = document.metadata["title"]
+            print(f"Document #{i+1}:\n     Title: '{title}'\n     Date: {date}      DOI: {doi}")
