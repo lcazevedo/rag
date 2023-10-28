@@ -47,4 +47,4 @@ elif args.action == 'retrieve':
             doi = document.metadata["doi"]
             date = document.metadata["date"]
             title = document.metadata["title"]
-            print(f"Document #{i+1}:\n     Title: '{title}'\n     Date: {date}      DOI: {doi}")
+            print(f"Document #{i+1}:\n     Title: '{title}'\n     Date: {date}      DOI: {doi if doi else '<unavailabe>'}")
