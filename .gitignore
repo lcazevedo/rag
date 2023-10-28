@@ -1,0 +1,24 @@
+*.zip
+*.tar.gz
+venv/
+
+# para manter a pasta data sem nada, exceto o .gitkeep
+data/*
+# exception to the rule
+!data/.gitkeep 
+
+# para manter a pasta models sem nada, exceto o .gitkeep
+models/*
+# exception to the rule
+!models/.gitkeep 
+
+# para manter a pasta vector_store sem nada, exceto o .gitkeep
+vector_store/*
+# exception to the rule
+!vector_store/.gitkeep 
+
+__pycache__/
+
+.git/
+
+
